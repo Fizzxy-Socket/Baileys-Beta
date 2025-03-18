@@ -1,3 +1,6 @@
+/// <reference types="node" />
+/// <reference types="node" />
+/// <reference types="node" />
 import { AxiosRequestConfig } from 'axios';
 import type { Logger } from 'pino';
 import type { Readable } from 'stream';
@@ -25,6 +28,7 @@ export type WAMediaUpload = Buffer | {
 } | {
     stream: Readable;
 };
+export import Annotations = proto.IInteractiveAnnotation;
 /** Set of message types that are supported by the library */
 export type MessageType = keyof proto.Message;
 export type DownloadableMessage = {
@@ -155,6 +159,7 @@ export type AnyMediaMessageContent = (({
     image: WAMediaUpload;
     caption?: string;
     jpegThumbnail?: string;
+    annotations?: Annotations;
 } & Mentionable & Contextable & Buttonable & Templatable & Interactiveable & Shopable & Collectionable & Cardsable & WithDimensions) | ({
     video: WAMediaUpload;
     caption?: string;
@@ -162,20 +167,24 @@ export type AnyMediaMessageContent = (({
     jpegThumbnail?: string;
     /** if set to true, will send as a `video note` */
     ptv?: boolean;
+    annotations?: Annotations;
 } & Mentionable & Contextable & Buttonable & Templatable & Interactiveable & Shopable & Collectionable & Cardsable & WithDimensions) | {
     audio: WAMediaUpload;
     /** if set to true, will send as a `voice note` */
     ptt?: boolean;
     /** optionally tell the duration of the audio */
     seconds?: number;
+    annotations?: Annotations;
 } | ({
     sticker: WAMediaUpload;
     isAnimated?: boolean;
+    annotations?: Annotations;
 } & WithDimensions) | ({
     document: WAMediaUpload;
     mimetype: string;
     fileName?: string;
     caption?: string;
+    annotations?: Annotations;
 } & Contextable & Buttonable & Templatable & Interactiveable & Shopable & Collectionable & Cardsable)) & {
     mimetype?: string;
 } & Editable;
