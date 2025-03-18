@@ -1,7 +1,7 @@
 {
-  "name": "@FizzxyTheGreat/BaileysBeta",
-  "version": "0.0.1",
-  "description": "WhatsApp API by Fizzxy",
+  "name": "@fizzxydev/baileys-pro",
+  "version": "8.6.10",
+  "description": "WhatsApp API Modified By Fizzxy",
   "keywords": [
     "Baileys",
     "whiskeysockets/baileys",
@@ -57,16 +57,16 @@
     "cache-manager": "4.0.1",
     "futoin-hkdf": "^1.5.1",
     "libphonenumber-js": "^1.10.20",
-    "libsignal": "github:nstar-y/libsignal",
+    "libsignal": "github:WhiskeySockets/libsignal-node",
     "music-metadata": "^7.12.3",
     "node-cache": "^5.1.2",
     "pino": "^7.0.0",
     "protobufjs": "^7.2.4",
     "uuid": "^9.0.0",
-    "ws": "^8.18.1"
+    "ws": "^8.13.0"
   },
   "devDependencies": {
-    "@adiwajshing/eslint-config": "github:adiwajshing/eslint-config",
+    "@adiwajshing/eslint-config": "github:whiskeysockets/eslint-config",
     "@types/got": "^9.6.11",
     "@types/jest": "^27.5.1",
     "@types/node": "^16.0.0",
