@@ -1,4 +1,4 @@
-# <div align='center'>BaileysPro - WhatsApp Web API</div>
+# <div align='center'>WhatsApp Web API</div>
 
 <div align='center'>
 
@@ -192,7 +192,7 @@ if (!sock.authState.creds.registered) {
 
 - Costum Pairing
 if (!sock.authState.creds.registered) {
-    const pair = "12345678" only 8 digit numbers or letters (no more or less)
+    const pair = "12345678" // only 8 digit numbers or letters (no more or less)
     const number = 'XXXXXXXXXXX'
     const code = await sock.requestPairingCode(number, pair)
     console.log(code)
